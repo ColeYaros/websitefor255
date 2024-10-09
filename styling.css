@@ -1,0 +1,576 @@
+:root {
+  --main-text-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+/* Selector 1 */
+/* Selecting element by html tag */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #535151;
+}
+
+/* Selector 2 */
+/* Selecting elements with specific class attribute */
+.logoImg{
+  height: 35px;
+  width: auto;
+}
+
+/* Setting nav bar format to leave gap on both sides and be responsive to screen size */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-right: 10%;
+  margin-left: 10%;
+} 
+
+/* Setting format for "buttons" on nav bar*/
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+  
+/* Selector selects all list elements that are decendants from nav-links */
+.nav-links li {
+  background-color: #535151;
+  margin: 0 0px;
+  padding: 5px;
+  padding-left: 25px;
+}
+
+/* Formatting when i hover over previous selector */
+.nav-links li:hover{
+  background-color: orangered;
+  border-radius: 25px;
+}
+
+/* formatting for all a elements that are decendants from nav-links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Hidding nav toggle */
+.nav-toggle {
+  display: none;
+}
+
+/* Hidding it but also formatting */
+.nav-toggle-label {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hidding dropdown social media row */
+.social-media-row{
+  display: none;
+}
+
+/* Formatting box for side pannel */
+/* Setting position fixed so its always accessable */
+.side-panel {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 10%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  z-index: 1000; 
+}
+
+/* Got from W3 schools */
+/* Setting a solid border visable to make a line vertical */
+.v1{
+  border-left: 4px solid orangered;
+  height: 125px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+  
+/* Selector 3 */
+/* Selector selects all a elements that are decendants from side pannel */
+.side-panel a {
+  display: block;
+ text-align: center;
+}
+
+/* Setting media icon size */
+.side-panel img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.2s ease;
+}
+
+/* creating margin for top image */
+.topIMGsb{
+  margin-top: 130px;
+}
+
+/* Selector 4 */
+/* Selector selects img elements that are decendants from side-panel when I hover over img */
+.side-panel img:hover {
+  transform: scale(1.1);
+}
+
+/* Formatting */
+.content {
+  padding: 20px;
+}
+
+/* Creating gap between bottem and next element */
+.content h1 {
+  margin-bottom: 20px;
+}
+  
+
+/* Main content */
+/* Using a system of rows of auto height and dividing the rows up with seperate divs */
+.row{
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+
+/* formatting for div on left side */
+.divleft {
+  padding: 10px;
+  width: 40%;
+  height: auto;
+  margin: 0px;
+  margin-left: 10%;
+  float: left;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  float: right;  
+  background-color: #272727;
+  border-radius: 10px;
+  border: 2px solid orangered;
+}
+
+/* Text formatting for header on left */
+.headerLeft{
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+}
+
+/* Contact me "button" formatting */
+.smallSquare{
+  width: fit-content;
+}
+
+/* Fomatting for left text */
+.divleftText{
+  border: 2px solid orangered;
+  width: fit-content;
+  height: auto;
+  padding: 15px;
+  font-size: 15px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+/* Fomatting for left text */
+.divleftText a{
+  color: white;
+}
+
+/* Section for other row content */
+.divmain {
+  padding: 10px;
+  width: 40%;
+  height:auto;
+  margin: 0px;
+  margin-right: 10%;
+  float: right;  
+  background-color: #333232;
+  border-radius: 10px;
+}
+
+/* ID selector for the profile image */
+#divmainimg{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Formattin for text under image */
+.divmainText{
+  border: 2px solid white;
+  height: fit-content;
+  width: fit-content;
+  padding: 15px;
+  font-size: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Making a row the full length of screen */
+.divfullrow{
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Formatting for quote */
+.divquotetext{
+  border: 2px solid orangered;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px;
+  font-size: 15px;
+  color: white;
+}
+
+/* Setting my row for projects */
+.rowProjects{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+/* Got from w3 schools */
+/* Using border to get another line but this one is horizontal */
+hr.line {
+  border: 1px solid orangered;
+  width: 30%;
+  margin-left: 7px;
+}
+
+/* Setting cards within out side pannels */
+.rowCards{
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+}
+
+/* Setting container for cards */
+/* Set to flex and wrap for formatting them in rows that collapse and expand */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* creating a card */
+.card {
+  border: rgb(8, 8, 8) solid 2px;
+  padding: 0px;
+  width: 300px;
+  text-align: center;
+  flex: 1 1 calc(33.33% - 40px); 
+  margin-bottom: 20px;
+}
+
+/* fake image for cards */
+.fakeimg{
+  font-family: Arial;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: 100px;
+  background-color: darkgray;
+  transition: width 2s, height 4s;
+}
+
+/* Selector 5 */
+/* Selector selects all horizontal rule elements that also have the class linebutton */
+hr.linebutton {
+  border: 1px solid orangered;
+}
+
+/* CSS variable */
+.card p {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: var(--main-text-color);
+}
+
+/* Formattig card button */
+.card-button {
+  background-color: orangered;
+  color: var(--main-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Selecting p elements that are decendant from fake img */
+.fakeimg p{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Setting hover setting to make button selection more obvious */
+.card-button:hover {
+  background-color: rgb(194, 52, 0);
+}
+
+/* Initial formatting for whole footer container */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+/* ID selector for the footer contacts to be more specifit and take precident */
+#footer-contacts {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid orangered;
+}
+
+/* Formatting for content section of footer content */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Group selectors for easier formatting */
+.footer-contact, .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact h4, .footer-logo img {
+  margin-bottom: 10px;
+}
+
+.footer-contact p, .footer-logo p {
+  margin: 5px 0;
+}
+
+/* setting format for footer socials */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Setting social icon size */
+.social-icon {
+  width: 25px;
+  height: 25px;
+  transition: color 0.3s ease;
+}
+
+/* Setting footer logo image size */
+.footer-logo img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Contacts for text under main contacts text */
+.contactsText{
+  color: var(--main-text-color);
+  margin-left: 10%;
+}
+
+/* formatting main side C contacts */
+.divmainC{
+  padding: 10px;
+  width: 40%;
+  height: 200px;
+  margin: 0px;
+  margin-right: 10%;
+  border-radius: 10px;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Formatting left side C contacts */
+.divleftC{
+  padding: 10px;
+  width: 40%;
+  height: 200px;
+  margin: 0px;
+  margin-left: 10%;
+  float: left;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  float: right;  
+}
+
+/* Social media icons formatted for all media in contacts */
+.all-media-social{
+  margin-left: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Responsvenes for smaller screens */
+@media (max-width: 768px) {
+  /* To get hamburger menu, I I make the "buttons" on the nav bar absolute to get them out of normal flow
+  I them arrange them in a column system. I also hide them until nav-toggle(hamburger button) is chcked*/
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 100%;
+    padding: 0px 0;
+    margin: 0px;
+  }
+  
+  .nav-toggle:checked + .nav-toggle-label + .nav-links {
+    display: flex;
+  }
+
+  .navbar{
+    margin: 0px;
+  }
+
+  .nav-links{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+ .nav-links li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+  }
+  
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .navbar{
+    justify-content: space-between;
+  }
+
+  .side-panel{
+    display: none;
+  }
+
+  .social-media-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    padding: 5px;
+    background-color: #535151;
+  }
+    
+  .social-media-row a img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s ease;
+  }
+    
+  .social-media-row a img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Making rows and div pages responsive */
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .divleft{
+    margin-left: 4%;
+    margin-right: 3%;
+    width: 93%;
+  }
+
+  .divmain{
+    margin-left: 4%;
+    margin-right: 3%;
+    width: 93%;
+  }
+
+  .divleftC{
+    margin-left: 4%;
+    margin-right: 3%;
+    width: 93%;
+  }
+
+  .divmainC{
+    margin-left: 4%;
+    margin-right: 3%;
+    width: 93%;
+    align-items: flex-start;
+  }
+
+  #footer-contacts{
+    position: static;
+  }
+}
+
+/* Making cards two wide */
+@media (max-width: 900px) {
+  .card {
+      flex: 1 1 calc(50% - 40px);
+  }
+}
+
+/* Making cards one wide */
+@media (max-width: 600px) {
+  .card {
+      flex: 1 1 100%;
+  }
+}
+
+/* Makking footer for smaller screens */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-contact, .footer-logo {
+      align-items: center;
+  }
+
+  .footer-social {
+      margin: 20px 0;
+  }
+}
